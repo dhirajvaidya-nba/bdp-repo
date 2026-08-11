@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: stg_example
+    description: "Example staging model that returns a single value."
