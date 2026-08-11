@@ -16,7 +16,18 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+seeds:
+  my_dbt_project:
+    +schema: raw
+
 models:
   my_dbt_project:
     staging:
       +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: customers
+    description: "Customer dimension enriched with lifetime order metrics."
+    columns:
+      - name: customer_id
+        description: "Primary key for a customer."
+        tests:
+          - unique
+          - not_null
+      - name: completed_order_count
+        description: "Total number of completed orders for the customer."
+      - name: lifetime_value
+        description: "Total spend across completed orders."

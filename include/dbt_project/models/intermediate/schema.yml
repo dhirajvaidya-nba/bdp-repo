@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_customer_orders
+    description: "Per-customer aggregation of completed orders (count, LTV, first/last order date)."
+    columns:
+      - name: customer_id
+        description: "Primary key - one row per customer with completed orders."
+        tests:
+          - unique
+          - not_null
+      - name: completed_order_count
+        description: "Number of completed orders for the customer."
+      - name: lifetime_value
+        description: "Sum of amounts across all completed orders."

@@ -1,0 +1,7 @@
+version: 2
+
+seeds:
+  - name: raw_customers
+    description: "Sample raw customer records used as the source for staging models."
+  - name: raw_orders
+    description: "Sample raw order records used as the source for staging models."
